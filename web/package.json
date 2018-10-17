@@ -1,0 +1,27 @@
+{
+  "name": "pris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "circleci": "^0.3.3",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0",
+    "webpack-cli": "^3.1.2",
+    "webpack": "^4.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ivaroli/Pris.git"
+  },
+  "author": "Ívar Óli Sigurðsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivaroli/Pris/issues"
+  },
+  "homepage": "https://github.com/ivaroli/Pris#readme"
+}
