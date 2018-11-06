@@ -1,0 +1,324 @@
+/* GENERAL BEGIN */
+body{
+    background-color: #E9E9E9;
+    font-size: 20px;
+}
+
+.clear{
+    clear: both;
+}
+
+.component{
+    background-color: #f8f9fa;
+    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
+    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
+}
+/* GENERAL END */
+
+/* FILTERS BEGIN */
+#filter-container{
+    position: absolute;
+    left: -390px;
+    top: 160px;
+    width: 571px;
+    max-height: 600px;
+    min-height: 600px;
+    z-index: 3;
+}
+
+.open{
+    -webkit-animation-name: Open; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation-name: Open;
+    animation-duration: .5s;
+    left: 0px !important;
+}
+
+.closed{
+    -webkit-animation-name: Close; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation-name: Close;
+    animation-duration: .5s;
+    left: -390px !important;
+}
+
+#filter-button{
+    float: right;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px 5px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: pink;
+}
+
+#filters{
+    float: left;
+    background-color: white;
+    width: 390px;
+    max-height: 900px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.filter-item div h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: default;
+    display: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.fadeIn{
+    -webkit-animation-name: FadeIn; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation-name: FadeIn;
+    animation-duration: .5s;
+    display: block !important;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.fadeOut{
+    -webkit-animation-name: FadeOut; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation-name: FadeOut;
+    animation-duration: .5s;
+    display: none !important;
+    background-color: rgba(0,0,0,0);
+}
+
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: pink;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox-text{
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+@-webkit-keyframes Open {
+    0%   {left: -390px;}
+    100% {left: 0px;}
+}
+@keyframes Open {
+    0%   {left: -390px;}
+    100% {left: 0px;}
+}
+
+@-webkit-keyframes Close {
+    0% {left: 0px;}
+    100%   {left: -390px;}
+}
+@keyframes Close {
+    0% {left: 0px;}
+    100%   {left: -390px;}
+}
+
+@-webkit-keyframes FadeIn {
+    0%   {background-color: rgba(0,0,0,0);}
+    100% {background-color: rgba(0,0,0,0.5);}
+}
+@keyframes FadeIn {
+    0%   {background-color: rgba(0,0,0,0);}
+    100% {background-color: rgba(0,0,0,0.5);}
+}
+
+@-webkit-keyframes FadeOut {
+    0% {background-color: rgba(0,0,0,0.5);}
+    100%   {background-color: rgba(0,0,0,0);}
+}
+@keyframes FadeOut {
+    0% {background-color: rgba(0,0,0,0.5);}
+    100%   {background-color: rgba(0,0,0,0);}
+}
+/* FILTERS END */
+
+/* PRODUCTS BEGIN */
+.products{
+    margin-top: 10px;
+}
+
+.product-container{
+    margin-top: 20px;
+}
+
+.product-image{
+    padding: 0px;
+    width: 100% !important;
+}
+
+.product-image img{
+    padding: 0px;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.product-image img{
+    object-fit: cover;
+    padding-right: 10px;
+}
+
+.item-title{
+    padding-top: 10px;
+}
+
+.item-link{
+    margin: 0px;
+    padding: 0px;
+}
+
+.item-price{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.product-button{
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    color: lightgrey;
+    text-align: center;
+    font-size: 90px;
+}
+
+.product-button:hover{
+    color: blue;
+    cursor: pointer;
+}
+/* PRODUCTS END */
+
+/* NAVBAR BEGIN */
+.navbar{
+    height: 150px;
+    background: url(/images/navbar_banner.svg) no-repeat;
+    border-radius: 0px;
+}
+
+.navbar-brand img{
+    height: 110px;
+    width: 110px;
+}
+
+.input-group{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+    height: 90px;
+    width: 80%;
+    margin: 0 auto;
+    vertical-align: middle;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.input-group-addon{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-left-width: 0px;
+    font-size: 30px;
+    background-color: #f9f9f9;
+    padding-right: 20px;
+}
+
+#product-input{
+    height: 100%;
+    font-size: 30px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: #f9f9f9;
+    border-right-width: 0px;
+    padding-left: 20px;
+}
+
+.nav-container{
+}
+/* NAVBAR END */

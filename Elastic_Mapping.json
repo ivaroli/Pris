@@ -1,0 +1,26 @@
+{
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "products" : {
+            "properties" : {
+                "title" : { "type" : "text" },
+		            "price" : { "type" : "integer" },
+		            "image" : { "type" : "text" },
+		            "link" : { "type" : "text" },
+		            "lables": { "type" : "text" },
+		            "category": { "type" : "text" },
+		            "clicks" : {"type" : "integer"},
+		            "version" : {"type" : "integer"},
+                "active" : {"type" : "boolean"},
+                "information" : {
+                    "properties" : {
+                      "name": { "type" : "text" },
+                      "data" : {"type" : "text"}
+                    }
+                }
+            }
+        }
+    }
+}

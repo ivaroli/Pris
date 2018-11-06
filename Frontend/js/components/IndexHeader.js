@@ -1,8 +1,9 @@
 import React from "react";
+import { findDOMNode } from "react-dom";
 import { SuggestionsField } from "./SuggestionsField";
-import { suggestionSearch } from "../../logic/QueryHandler";
+import { suggestionSearch } from "../QueryHandler";
 
-export class Header extends React.Component{
+export class IndexHeader extends React.Component{
     constructor(props) {
         super(props);
         this.state = {value: ''};
@@ -49,20 +50,17 @@ export class Header extends React.Component{
 
     render(){
         return(
-            <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand" href="/"><img src="/images/logo_NT.png" alt="" width="80px" height="auto"></img></a>
-            <div className="nav-container">
-                <div className="container">
-                    <form id="search_form" autoComplete="off">
-                        <div className="input-group">
-                            <input id="product-input" type="text" className="form-control" name="product-input" placeholder={this.props.Query} onChange={this.handleChange}></input>
-                            <span className="input-group-addon"><i className="glyphicon glyphicon-search"></i></span>
-                        </div>
-                    </form>
-                    <SuggestionsField onRef={ref => (this.child = ref)}/>
-                </div>
+            <div>
+                <form id="search_form" action="results" method="get" autoComplete="off">
+                    <div className="input-group" id="search-input">
+                        <input type="text" className="form-control" id="product" placeholder="Sláðu inn nafn eða gerð vöru." name="product" onChange={this.handleChange} ></input>
+                            <span className="input-group-addon">
+                                <span className="glyphicon glyphicon-search"></span>
+                            </span>
+                    </div>
+                </form>
+                <SuggestionsField onRef={ref => (this.child = ref)}/>
             </div>
-            </nav>
         );
     }
 }

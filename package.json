@@ -2,8 +2,9 @@
   "name": "pris",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
   "dependencies": {
+    "@google-cloud/vision": "^0.21.0",
     "babel": "^6.23.0",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
@@ -11,36 +12,31 @@
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
+    "cheerio": "^1.0.0-rc.2",
     "elasticsearch": "^15.0.0",
     "express": "^4.16.3",
+    "firebase": "^5.3.1",
+    "firebase-admin": "^6.0.0",
+    "google-translate": "^2.2.0",
+    "jquery": "^3.3.1",
+    "material-ui": "^0.20.1",
     "npm": "^6.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.4.0",
     "react-onclickoutside": "^6.7.1",
     "react-rangeslider": "^2.2.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "webpack": "^4.8.3"
   },
   "devDependencies": {
-    "circleci": "^0.3.3",
-    "jest": "^23.6.0",
-    "supertest": "^3.3.0",
-    "webpack": "^4.21.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^2.1.4"
   },
   "scripts": {
-    "test": "jest",
-    "start": "node app",
-    "build": "node_modules/.bin/webpack -p",
+    "start": "node Server/app.js",
+    "buildapp": "npm run build",
+    "build": "node_modules/.bin/webpack -d",
     "build:prod": "webpack -p"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ivaroli/Pris.git"
-  },
   "author": "Ívar Óli Sigurðsson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ivaroli/Pris/issues"
-  },
-  "homepage": "https://github.com/ivaroli/Pris#readme"
+  "license": "MIT"
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { IndexHeader } from "../client/components/IndexHeader";
+import { IndexHeader } from "./components/IndexHeader";
 
 function clearSuggestions(){
     console.log("typpi");

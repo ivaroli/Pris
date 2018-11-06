@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { FilterComponent } from "../client/components/FilterComponent";
-import { CreateFilter, HideFilters, ShowFilters, GetFilterStatus } from "../client/Filter";
-import { DisplayData } from "../client/ProductDisplay";
-import { Header } from "../client/components/Header";
+import { FilterComponent } from "./components/FilterComponent";
+import { CreateFilter, HideFilters, ShowFilters, GetFilterStatus } from "./Filter";
+import { DisplayData } from "./ProductDisplay";
+import { Header } from "./components/Header";
 import { getData, cleanData } from "./QueryHandler";
 
 //nær í nafnið á leitarstrengnum frá url-inu

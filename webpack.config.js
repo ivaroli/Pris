@@ -1,16 +1,16 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+var DIST_DIR = path.resolve(__dirname, "Frontend/js/builds");
+var SRC_DIR = path.resolve(__dirname, "Frontend/js");
 
 var config = {
     entry : {
-        results: SRC_DIR + "/logic/results.js",
-        index: SRC_DIR + "/logic/index.js"},
+        resultsPage: SRC_DIR + "/results.js",
+        indexPage: SRC_DIR + "/index.js"},
     output: {
         path: DIST_DIR,
-        filename: "[name].min.js"
+        filename: "[name].js"
     },
     module: {
         rules: [
